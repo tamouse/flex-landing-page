@@ -1,3 +1,112 @@
 /**
  * Site-specific SCSS
  */
+
+/* Variables */
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-lg: 1440px;
+$dark-brand: rebeccapurple;
+$light-accent: azure;
+
+.flex-container {
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.box-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $screen-sm) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: flex-start;
+    }
+}
+
+$box-height: 30vh;
+
+.box {
+    flex: 1;
+    min-height: $box-height;
+}
+
+.skosh {
+    padding: 20px;
+}
+
+.wrapper {
+    max-width: 80%;
+    margin: auto;
+}
+
+.wrapper-narrow {
+    max-width: 40%;
+    margin: auto;
+}
+
+/* Bootstrap overrides */
+.navbar {
+    margin-bottom: 0;
+}
+.jumbotron {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.btn-xl {
+    padding: 10px 16px;
+    font-size: 24px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+
+/* Site classes */
+.header {
+    background-color: $dark-brand;
+    color: $light-accent;
+    .navbar-default {
+        background-color: $dark-brand;
+        background-image: none;
+        color: $light-accent;
+        border-radius: none;
+        border: none;
+        .navbar-nav {
+            > li {
+                > a {
+                    color: $light-accent;
+                }
+            }
+        }
+    }
+}
+.footer {}
+
+@import "social_icon";
+
+/* Section-specific treatments */
+@import "about";
+@import "portfolio";
+@import "webology";
+@import "hireme";
+@import "contact"
