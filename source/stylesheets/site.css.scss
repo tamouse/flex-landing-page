@@ -2,143 +2,23 @@
  * Site-specific SCSS
  */
 
-/* Variables */
-$screen-sm: 768px;
-$screen-md: 1024px;
-$screen-lg: 1440px;
-$dark-brand: rebeccapurple;
-$light-accent: azure;
+@import "variables";
+@import "mixins";
+@import "elements";
+@import "classes/site_classes";
+@import "classes/flex_containers";
+@import "classes/wrappers";
 
-$base-font-size: 23px;
-
-$box-height: 30vh;
-$navbar-height: 50px;
-
-/* general */
-
-/* rollunder fix */
-/* $rollunder-offset: ($navbar-height+25); */
-/* section[id]:before { */
-/*     display: block; */
-/*     content: ' '; */
-/*     margin-top: -($rollunder-offset); */
-/*     height: ($rollunder-offset); */
-/*     /\* visibility: hidden; *\/ */
-/* } */
-
-/* mixins */
-@mixin center-both {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.center-both {
-    @include center-both;
-}
-
-@mixin light-title-text {
-    color: $light-accent;
-    text-shadow: 2px 2px black;
-}
-
-@mixin dark-title-text {
-    color: #333;
-    text-shadow: 2px 2px #ccc;
-}
-
-.dark-text { @include dark-title-text; }
-
-/* elements */
-a, a:hover, a:visited, a:active {
-    color: $light-accent;
-}
-
-
-/* containers for flexing */
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.flex-center {
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-item {
-    flex: 1;
-}
-
-.box-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    @media (min-width: $screen-md) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        justify-content: flex-start;
-        min-height: 50vh;
-    }
-}
-
-
-.box {
-    flex: 1;
-    min-height: $box-height;
-    @media (min-width: $screen-md) {
-        min-width: 30vw;
-        width: 30vw;
-        min-height: 50vh;
-    }
-}
-
-.skosh {
-    padding: 20px;
-}
-
-.wrapper {
-    max-width: 80%;
-    margin: auto;
-    @media (min-width: $screen-md) {
-        max-width: 60%;
-    }
-}
-
-.wrapper-narrow {
-    max-width: 40%;
-    margin: auto;
-}
-
-/* Bootstrap overrides */
-.navbar {
-    margin-bottom: 0;
-}
-
-.btn {
-    text-shadow: none;
-}
-
-.btn-xl {
-    padding: 10px 16px;
-    font-size: 24px;
-    line-height: 1.3333333;
-    border-radius: 6px;
-}
-
-@import "social_icon";
-@import "background_images";
-@import "site_classes";
 
 /* Section-specific treatments */
-@import "about";
-@import "portfolio";
-@import "webology";
-@import "hireme";
-@import "contact"
+@import "objects/about";
+@import "objects/portfolio";
+@import "objects/webology";
+@import "objects/hireme";
+@import "objects/contact";
+
+@import "components/social_icon";
+@import "components/spacing";
+@import "components/background_images";
+
+@import "overrides/bootstrap";
