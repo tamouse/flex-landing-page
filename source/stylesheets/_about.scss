@@ -1,27 +1,4 @@
 
 #about {
-    padding: 0 3px;
-    background-color: #c0c0c0;
-    background-position-x: center;
-    background-position-y: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../images/woman-neck-1080.jpg);
-    color: #efefef;
-    text-shadow: 2px 2px #333;
-
-    @media (min-width: $screen-sm) {
-        padding: 0 100px;
-    }
-    @media (min-width: $screen-md) {
-        padding: 100px 200px;
-    }
-    @media (min-width: $screen-lg) {
-        padding: 200px;
-    }
-
-    a, a:visited, a:active {
-        color: $light-accent;
-    }
-
+    @extend .about-bg;
 }

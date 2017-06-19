@@ -3,15 +3,4 @@
     padding: 0 10px;
     background-color: lighten($dark-brand, 25);
     color: #eee;
-    h1,h2,h3,h4,h5,h6,p {
-        text-shadow: 2px 2px #303030;
-    }
-
-    @media (min-width: $screen-sm) {
-        padding: 10px 50px;
-    }
-
-    @media (min-width: $screen-md) {
-        padding: 50px 150px;
-    }
 }

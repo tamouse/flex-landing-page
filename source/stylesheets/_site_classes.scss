@@ -1,0 +1,35 @@
+/* Site classes */
+.feature {
+    @include light-title-text;
+    @media (min-width: $screen-sm) {
+        min-height: 100vh;
+        height: 100vh;
+        @include center-both;
+        font-size: 1.3em;
+    }
+}
+
+.header {
+    background-color: $dark-brand;
+    color: $light-accent;
+    .navbar-default {
+        background-color: $dark-brand;
+        background-image: none;
+        color: $light-accent;
+        border-radius: 0;
+        border: none;
+        .navbar-nav {
+            > li {
+                > a {
+                    color: $light-accent;
+                }
+            }
+        }
+    }
+}
+.footer {
+    margin-top: 15px;
+    padding: 7px;
+    font-size: 0.8em;
+    background-color: $dark-brand;
+}
