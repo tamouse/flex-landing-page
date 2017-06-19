@@ -1,0 +1,275 @@
+/**
+ * Site-specific SCSS
+ */
+/* Variables */
+.flex-container {
+  height: 100vh;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.flex-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.flex-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.box-container {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 768px) {
+    .box-container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
+
+.box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-height: 30vh; }
+
+.skosh {
+  padding: 20px; }
+
+.wrapper {
+  max-width: 80%;
+  margin: auto; }
+
+.wrapper-narrow {
+  max-width: 40%;
+  margin: auto; }
+
+/* Bootstrap overrides */
+.navbar {
+  margin-bottom: 0; }
+
+.jumbotron {
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.btn-xl {
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.3333333;
+  border-radius: 6px; }
+
+/* Site classes */
+.header {
+  background-color: rebeccapurple;
+  color: azure; }
+  .header .navbar-default {
+    background-color: rebeccapurple;
+    background-image: none;
+    color: azure;
+    border-radius: none;
+    border: none; }
+    .header .navbar-default .navbar-nav > li > a {
+      color: azure; }
+
+.social-icon-wrapper {
+  max-width: 120px;
+  margin: auto; }
+
+a.social-icon {
+  background-color: rebeccapurple;
+  color: azure;
+  padding: 4px 8px;
+  height: 28px;
+  width: 28px;
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+  border-radius: 50%; }
+  a.social-icon .text {
+    visibility: hidden;
+    width: 0;
+    max-width: 0; }
+
+/* Section-specific treatments */
+#about {
+  padding: 0 3px;
+  background-color: #c0c0c0;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/woman-neck-1080.jpg);
+  color: #efefef;
+  text-shadow: 2px 2px #333; }
+  @media (min-width: 768px) {
+    #about {
+      padding: 0 100px; } }
+  @media (min-width: 1024px) {
+    #about {
+      padding: 100px 200px; } }
+  @media (min-width: 1440px) {
+    #about {
+      padding: 200px; } }
+  #about a, #about a:visited, #about a:active {
+    color: azure; }
+
+/* this will be fun, hey? */
+/* The portfolio boxes are all clickable links.
+       Without wanting to gin up some javascript and
+       add onclick event listeners, I made them
+       anchor tags instead. Since they're anchor tags,
+       they can't contain any block elements directly,
+       so I used spans. Turn everything back into blocks
+       with CSS is easy.
+*/
+a.portfolio-box {
+  display: block;
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  color: azure;
+  height: 30vh;
+  text-decoration: none; }
+  a.portfolio-box .flapper-wrapper {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    height: 30vh;
+    /* min-height: 100%; */
+    /* min-width: 100%; */
+    background-color: rgba(102, 51, 153, 0.6); }
+
+.no-touchevents a.portfolio-box .flapper-wrapper {
+  visibility: hidden;
+  background-color: transparent;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms; }
+.no-touchevents a.portfolio-box:hover {
+  color: azure;
+  text-decoration: none; }
+  .no-touchevents a.portfolio-box:hover .flapper-wrapper {
+    background-color: rgba(102, 51, 153, 0.75);
+    visibility: visible; }
+
+.swaac-bg {
+  background-image: url(../images/swaac.jpg);
+  background-color: #c0c0c0;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.art-bg {
+  background-image: url(../images/art.jpg);
+  background-color: #c0c0c0;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.resume-bg {
+  background-image: url(../images/resume.jpg);
+  background-color: #c0c0c0;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.blog-bg {
+  background-image: url(../images/blog.jpg);
+  background-color: #c0c0c0;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.recipes-bg {
+  background-image: url(../images/recipes.jpg);
+  background-color: #c0c0c0;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.wiki-bg {
+  background-image: url(../images/wiki.jpg);
+  background-color: #c0c0c0;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#webology {
+  padding: 0 10px;
+  background-color: #a679d2;
+  color: #eee; }
+  #webology h1, #webology h2, #webology h3, #webology h4, #webology h5, #webology h6, #webology p {
+    text-shadow: 2px 2px #303030; }
+  @media (min-width: 768px) {
+    #webology {
+      padding: 10px 50px; } }
+  @media (min-width: 1024px) {
+    #webology {
+      padding: 50px 150px; } }
+
+#hireme {
+  background-color: azure;
+  padding: 10px; }
+
+.call-to-action {
+  background-image: none;
+  background-color: rebeccapurple;
+  border-color: rebeccapurple;
+  padding: 0.5em;
+  margin: 1.5em;
+  border-radius: 15px;
+  font-size: 2em;
+  text-align: center;
+  color: azure;
+  text-shadow: 2px 2px #000; }
+
+#contact {
+  background-image: url(../images/map.png);
+  background-color: white;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-bottom: 40px; }
