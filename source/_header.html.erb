@@ -1,8 +1,16 @@
-<header class="flex-item header">
-  <nav class="navbar navbar-default navbar-fixed-top">
+<header class="header">
+  <nav id="navbar-top" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collaped"
+                data-toggle="collapse"
+                data-target="#navlinks"
+                aira-expanded="false">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
       <div id="navlinks" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-right">
           <li><a href="#about">About Me</a></li>
           <li><a href="#portfolio">My Work</a></li>
           <li><a href="#webology">Webology</a></li>

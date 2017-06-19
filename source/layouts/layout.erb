@@ -12,11 +12,17 @@
     <%= stylesheet_link_tag "#{config[:baseurl]}/stylesheets/site" %>
   </head>
   <body>
-    <div class="flex-container">
-      <%= yield %>
-    </div>
+    <%= partial "header" %>
+    <main class="main" role="main">
+      <div id="top" class="flex-container">
+        <%= yield %>
+      </div>
+    </main>
+
+
     <%= javascript_include_tag "#{config[:baseurl]}/vendor/jquery/js/jquery-3.2.1.min" %>
     <%= javascript_include_tag "#{config[:baseurl]}/vendor/modernizr/js/modernizr-custom" %>
+    <%= javascript_include_tag "#{config[:baseurl]}/vendor/bootstrap/js/bootstrap.min" %>
     <%= javascript_include_tag "#{config[:baseurl]}/javascripts/site" %>
   </body>
 </html>

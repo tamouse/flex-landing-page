@@ -1,4 +1,14 @@
 /* Site classes */
+.main {
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    overflow-y: scroll;
+    top: $navbar-height;
+    bottom: $navbar-height;
+}
+
+
 .feature {
     @include light-title-text;
     @media (min-width: $screen-sm) {
@@ -20,16 +30,21 @@
         border: none;
         .navbar-nav {
             > li {
-                > a {
+                > a, > a:active, > a:hover, > a:visited {
                     color: $light-accent;
                 }
+            }
+            > li.active {
+                background-color: black;
             }
         }
     }
 }
+
 .footer {
     margin-top: 15px;
     padding: 7px;
     font-size: 0.8em;
     background-color: $dark-brand;
+    height: 100px;
 }
