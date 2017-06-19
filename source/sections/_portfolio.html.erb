@@ -1,7 +1,7 @@
 <section id="portfolio" class="flex-item">
   <div class="box-container">
     <div class="box">
-      <%= partial(:portfolio_box, locals: {
+      <%= partial("components/portfolio_box", locals: {
           bg_image: 'swaac-bg',
           title: 'SWaaC',
           desc: "My devblog, Software as a Craft",
@@ -9,7 +9,7 @@
           }) %>
     </div>
     <div class="box">
-      <%= partial(:portfolio_box, locals: {
+      <%= partial("components/portfolio_box", locals: {
           bg_image: 'art-bg',
           title: "My Art Blog",
           desc: "watercolour, ink, sketching, photography, digital creations",
@@ -17,7 +17,7 @@
           }) %>
     </div>
     <div class="box">
-      <%= partial(:portfolio_box, locals: {
+      <%= partial("components/portfolio_box", locals: {
           title: "My Resume",
           bg_image: "resume-bg",
           desc: "My online professional resume",
@@ -25,7 +25,7 @@
           }) %>
     </div>
     <div class="box">
-      <%= partial(:portfolio_box, locals: {
+      <%= partial("components/portfolio_box", locals: {
           title: "Web Blog",
           bg_image: "blog-bg",
           desc: "A compendium of rumblings and ramblings of a well-traveled tech-mouse.",
@@ -33,7 +33,7 @@
           }) %>
     </div>
     <div class="box">
-      <%= partial(:portfolio_box, locals: {
+      <%= partial("components/portfolio_box", locals: {
           title: "Recipe Collection",
           bg_image: "recipes-bg",
           link: "https://recipes.tamouse.org",
@@ -41,7 +41,7 @@
           }) %>
     </div>
     <div class="box">
-      <%= partial(:portfolio_box, locals: {
+      <%= partial("components/portfolio_box", locals: {
           title: "My GitHub",
           bg_image: "wiki-bg",
           link: "https://github.com/tamouse",
