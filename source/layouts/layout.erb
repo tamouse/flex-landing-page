@@ -7,18 +7,18 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Tamouse.Org" %></title>
-    <%= stylesheet_link_tag "vendor/bootstrap/css/bootstrap.min.css" %>
-    <%= stylesheet_link_tag "vendor/bootstrap/css/bootstrap-theme.min.css" %>
-    <%= stylesheet_link_tag "vendor/font-awesome/css/font-awesome.min.css" %>
-    <%= stylesheet_link_tag "site" %>
+    <%= stylesheet_link_tag "#{config[:baseurl]}/vendor/bootstrap/css/bootstrap.min.css" %>
+    <%= stylesheet_link_tag "#{config[:baseurl]}/vendor/bootstrap/css/bootstrap-theme.min.css" %>
+    <%= stylesheet_link_tag "#{config[:baseurl]}/vendor/font-awesome/css/font-awesome.min.css" %>
+    <%= stylesheet_link_tag "#{config[:baseurl]}/site" %>
   </head>
   <body>
     <div class="flex-container">
       <%= yield %>
     </div>
-    <%= javascript_include_tag "vendor/jquery/js/jquery-3.2.1.min" %>
-    <%= javascript_include_tag "vendor/modernizr/js/modernizr-custom" %>
-    <%= javascript_include_tag "vendor/bootstrap/js/bootstrap.min" %>
-    <%= javascript_include_tag "site" %>
+    <%= javascript_include_tag "#{config[:baseurl]}vendor/jquery/js/jquery-3.2.1.min" %>
+    <%= javascript_include_tag "#{config[:baseurl]}vendor/modernizr/js/modernizr-custom" %>
+    <%= javascript_include_tag "#{config[:baseurl]}vendor/bootstrap/js/bootstrap.min" %>
+    <%= javascript_include_tag "#{config[:baseurl]}/javascripts/site" %>
   </body>
 </html>

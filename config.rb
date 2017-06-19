@@ -5,6 +5,8 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+config[:baseurl] = ''
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -40,7 +42,6 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+configure :build do
+  config[:baseurl] = "/flex-landing-page" # see https://forum.middlemanapp.com/t/trouble-with-link-to-and-relative-links-for-gh-pages/1864/2
+end
